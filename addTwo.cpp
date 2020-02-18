@@ -27,6 +27,10 @@ void func2();
 void func3();
 void func4();
 
+int **ptr_ptr;
+
+int xy[2][2] = {1,2,3,4};
+
 typedef struct __context_t context_t;
 typedef (*functionHandler)(context_t*);
 
@@ -79,6 +83,9 @@ int main()
     (z)(c);
     (*c->funcHandler)(c);
     
+    ptr_ptr = xy;
+    
+    printf("%d",ptr_ptr[0]);
 
     return 0;
 }
